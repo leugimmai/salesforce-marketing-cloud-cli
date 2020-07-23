@@ -3,9 +3,9 @@ import sys
 from colorama import Fore, Back, Style
 from sfmc.retrieve_auth_token import retrieve_auth_token
 
-def get_object_path(business_unit, content_type, content_name):
+def get_object_path(account, content_type, content_name):
     
-    stubObj = retrieve_auth_token(business_unit)
+    stubObj = retrieve_auth_token(account)
 
     full_path = content_name
     

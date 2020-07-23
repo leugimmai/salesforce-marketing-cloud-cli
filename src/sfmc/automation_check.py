@@ -7,10 +7,10 @@ from config.automations_to_check import automations
 def automation_check():
     print(f"{Fore.CYAN}=====================================================")
     
-    for business in automations:
-        auth_token = retrieve_auth_token(business['business_unit'])
+    for account in automations:
+        auth_token = retrieve_auth_token(account['account'])
 
-        for automation in business['automations']:
+        for automation in account['automations']:
             check_automation_is_turned_on(automation, auth_token)
             
             print(f"{Fore.CYAN}=====================================================")
