@@ -2,6 +2,7 @@ from __future__ import print_function, unicode_literals
 from PyInquirer import prompt, print_json
 from sfmc.retrieve_business_units import retrieve_business_units
 from sfmc.get_object_path import get_object_path
+from sfmc.automation_check import automation_check
 
 class CliPrompt:
     def __init__(self):
@@ -14,7 +15,9 @@ class CliPrompt:
                 "type": "list",
                 "name": "action",
                 "message": "What would you like to do?",
-                "choices": ["Retrieve Object Path", "Exit"],
+                "choices": ["Retrieve Object Path", 
+                            "Check Automations", 
+                            "Exit"],
             }
         ]
         result = prompt(action_to_take)
@@ -66,3 +69,6 @@ class CliPrompt:
         result = prompt(object_name)
 
         return result["name"]
+
+    def check_automations(self):
+        automation_check()
