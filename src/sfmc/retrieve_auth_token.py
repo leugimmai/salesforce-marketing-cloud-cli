@@ -1,9 +1,9 @@
 import FuelSDK
 from colorama import Fore, Back, Style
-from config.sfmc_creds import sfmc_creds
+from config.sfmc_credentials import sfmc_credentials
 import sys
 
-def get_bu_client_id_and_secret(business_unit):
+def retrieve_auth_token(business_unit):
     print(f'{Fore.YELLOW}==== Retrieving Credentials For {business_unit} ====')
     credentials = get_secrets(business_unit)
 
@@ -14,7 +14,7 @@ def get_bu_client_id_and_secret(business_unit):
 
 def get_secrets(business_unit):
 
-    for bu in sfmc_creds:
+    for bu in sfmc_credentials:
         if business_unit == bu['name']:
             return bu
 
