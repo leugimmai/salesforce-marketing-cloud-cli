@@ -1,7 +1,11 @@
 from __future__ import print_function, unicode_literals
 from PyInquirer import prompt, print_json
+from sfmc.retrieve_business_units import retrieve_business_units
 
 class CliPrompt:
+    def __init__(self):
+        self.business_unit = None
+
     def initial_prompt(self):
 
         action_to_take = [
@@ -16,9 +20,27 @@ class CliPrompt:
 
         return result["action"]
 
+    def choose_business_unit(self):
+        business_units = retrieve_business_units()
+
+        business_unit = [
+            {
+                "type": "list",
+                "name": "name",
+                "message": "Choose a BU in SFMC:",
+                "choices": business_units,
+            }
+        ]
+
+        result = prompt(business_unit)
+
+        self.business_unit = result["name"]
+
+
     def retrieve_object(self):
         object_type = self.sfmc_object()
         name = self.sfmc_object_name(object_type)
+        print(object_type, name, self.business_unit)
 
     def sfmc_object(self):
         sfmc_object = [
