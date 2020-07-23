@@ -1,6 +1,7 @@
 from __future__ import print_function, unicode_literals
 from PyInquirer import prompt, print_json
 from sfmc.retrieve_business_units import retrieve_business_units
+from sfmc.get_object_path import get_object_path
 
 class CliPrompt:
     def __init__(self):
@@ -40,7 +41,7 @@ class CliPrompt:
     def retrieve_object(self):
         object_type = self.sfmc_object()
         name = self.sfmc_object_name(object_type)
-        print(object_type, name, self.business_unit)
+        get_object_path(self.business_unit, object_type, name)
 
     def sfmc_object(self):
         sfmc_object = [
