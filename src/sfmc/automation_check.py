@@ -1,19 +1,23 @@
 import FuelSDK
 import sys
+import json
 from colorama import Fore, Back, Style
 from sfmc.retrieve_auth_token import retrieve_auth_token
-from config.automations_to_check import automations
+from pathlib import Path
 
 def automation_check():
     print(f"{Fore.CYAN}=====================================================")
     
-    for account in automations:
-        auth_token = retrieve_auth_token(account['account'])
+    with open(f"{Path.home()}/sfmc_cli_automations_to_check.json", "r") as f:
+        data = json.loads(f.read())
+        
+        for account in data:
+            auth_token = retrieve_auth_token(account['account'])
 
-        for automation in account['automations']:
-            check_automation_is_turned_on(automation, auth_token)
-            
-            print(f"{Fore.CYAN}=====================================================")
+            for automation in account['automations']:
+                check_automation_is_turned_on(automation, auth_token)
+                
+                print(f"{Fore.CYAN}=====================================================")
     
 def check_automation_is_turned_on(automation_name, authentication):
     
