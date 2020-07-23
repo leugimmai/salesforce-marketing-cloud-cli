@@ -132,4 +132,4 @@ dmypy.json
 tmp/*
 soap_cache_file.json
 config/health_check.py
-config/sfmc_creds.py
+config/sfmc_credentials.py
