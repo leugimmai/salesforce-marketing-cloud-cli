@@ -1,10 +1,14 @@
-from config.sfmc_credentials import sfmc_credentials
+import json
+from pathlib import Path
 
 def retrieve_business_units():
 
     business_units = []
 
-    for business in sfmc_credentials:
-        business_units.append(business['name'])
+    with open(f"{Path.home()}/sfmc_cli_credentials.json", "r") as f:
+        data = json.loads(f.read())
+        
+        for business in data:
+            business_units.append(business['name'])
 
     return business_units
