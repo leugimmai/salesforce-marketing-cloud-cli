@@ -14,4 +14,14 @@ A CLI application built with python that interfaces with [Salesforce Marketing C
 
 ## Configuration
 
+You will need this file in your root: ```~/sfmc_cli_credentials.json```. Containing an array of Accounts and there credentials.
+
+```json
+[{
+    "name": "Account Name",
+    "client_id": "",
+    "client_secret": ""
+}]
+```
+
 ## Usage
