@@ -22,6 +22,8 @@ def get_object_path(account, content_type, content_name):
         get = FuelSDK.ET_Get(auth_stub=stubObj, obj_type="FilterDefinition", props=props, search_filter=search_filter)
     if content_type == "Email":
         get = FuelSDK.ET_Get(auth_stub=stubObj, obj_type="Email", props=props, search_filter=search_filter)
+    if content_type == "Automation":
+        get = FuelSDK.ET_Get(auth_stub=stubObj, obj_type="Automation", props=props, search_filter=search_filter)
 
     try:
         folder_id = get.results[0].CategoryID
