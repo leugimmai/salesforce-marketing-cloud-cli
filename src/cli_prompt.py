@@ -15,8 +15,8 @@ class CliPrompt:
                 "type": "list",
                 "name": "action",
                 "message": "What would you like to do?",
-                "choices": ["Retrieve Object Path", 
-                            "Check Automations", 
+                "choices": ["Retrieve Object Path",
+                            "Check Automations",
                             "Exit"],
             }
         ]
@@ -52,7 +52,7 @@ class CliPrompt:
                 "type": "list",
                 "name": "object",
                 "message": "Which SFMC Object do you need?",
-                "choices": ["Data Extension", "Triggered Send", "Data Filter"],
+                "choices": ["Data Extension", "Triggered Send", "Data Filter", "Email"],
             }
         ]
 
