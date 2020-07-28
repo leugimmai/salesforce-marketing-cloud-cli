@@ -27,7 +27,7 @@ To check any automations you will need this file ```~/sfmc_cli_automations_to_ch
 ```json
 [
     {
-        "account": "Account Name", // Should match what is in sfmc_cli_credentials.json
+        "account": "Account Name",
         "automations": ["An Automation", "Another Automation"]
     }
 ]
