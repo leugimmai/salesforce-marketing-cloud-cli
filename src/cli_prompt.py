@@ -3,6 +3,7 @@ from PyInquirer import prompt, print_json
 from sfmc.retrieve_accounts import retrieve_accounts
 from sfmc.get_object_path import get_object_path
 from sfmc.automation_check import automation_check
+from sfmc.search_queries import search_queries
 
 class CliPrompt:
     def __init__(self):
@@ -17,6 +18,7 @@ class CliPrompt:
                 "message": "What would you like to do?",
                 "choices": ["Retrieve Object Path",
                             "Check Automations",
+                            "Search Queries",
                             "Exit"],
             }
         ]
@@ -72,3 +74,13 @@ class CliPrompt:
 
     def check_automations(self):
         automation_check()
+
+    def search_queries(self):
+        object_name = [
+            {
+                "type": "input",
+                "name": "name",
+                "message": f"Enter the query string you are searching for:"}
+        ]
+
+        search_queries(prompt(object_name)["name"])

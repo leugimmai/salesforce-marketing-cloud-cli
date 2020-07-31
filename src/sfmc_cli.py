@@ -13,6 +13,8 @@ def start_sfmc_cli():
         cli_prompt.retrieve_object()
     elif response == "Check Automations":
         cli_prompt.check_automations()
+    elif response == "Search Queries":
+        cli_prompt.search_queries()
     else:
         print("Exiting")
 
