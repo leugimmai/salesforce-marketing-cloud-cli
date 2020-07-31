@@ -70,6 +70,9 @@ def get_automation_id(auth, name):
 
     response = to_dict(response.text)
 
+    if response == "Bad Request":
+        return None
+
     if 'Program' not in json.dumps(response['soap:Envelope']['soap:Body']):
         return None
     else:
