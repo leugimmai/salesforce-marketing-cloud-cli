@@ -41,3 +41,5 @@ To check any automations you will need this file ```~/sfmc_cli_automations_to_ch
 ```
 
 ## Usage
+
+Run ```sfmc_cli``` in your terminal and make your selection.
