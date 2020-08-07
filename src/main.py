@@ -1,5 +1,5 @@
 from colorama import init
-from src.sfmc_cli import start_sfmc_cli
+from src.cli import start_sfmc_cli
 
 def sfmc_cli():
     init()

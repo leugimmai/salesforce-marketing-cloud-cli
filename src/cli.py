@@ -1,5 +1,5 @@
 from figlet.startup import title
-from cli_prompt import CliPrompt
+from src.cli_prompt import CliPrompt
 
 def start_sfmc_cli():
     title()
