@@ -12,6 +12,13 @@ A CLI application built with python that interfaces with [Salesforce Marketing C
 
 ## Installation
 
+Requirement: Python 3+
+
+1. ``` git clone https://github.com/leugimmai/salesforce-marketing-cloud-cli.git ```
+2. ``` cd salesforce-marketing-cloud-cli ```
+3. ``` pip install -r requirements.txt ```
+4. ``` pip install . ```
+
 ## Configuration
 
 You will need this file: ```~/sfmc_cli_credentials.json```. Containing an array of Accounts and there credentials.
