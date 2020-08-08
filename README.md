@@ -9,6 +9,7 @@ A CLI application built with python that interfaces with [Salesforce Marketing C
 * [Usage](#usage)
 
 ## Demo
+<a href="https://asciinema.org/a/352288?autplay=1" target="_blank"><img src="https://asciinema.org/a/352288.svg" width="836"/></a>
 
 ## Installation
 
