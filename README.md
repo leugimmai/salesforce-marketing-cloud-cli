@@ -9,8 +9,16 @@ A CLI application built with python that interfaces with [Salesforce Marketing C
 * [Usage](#usage)
 
 ## Demo
+<a href="https://asciinema.org/a/352288?autplay=1" target="_blank"><img src="https://asciinema.org/a/352288.svg" width="836"/></a>
 
 ## Installation
+
+Requirement: Python 3+
+
+1. ``` git clone https://github.com/leugimmai/salesforce-marketing-cloud-cli.git ```
+2. ``` cd salesforce-marketing-cloud-cli ```
+3. ``` pip install -r requirements.txt ```
+4. ``` pip install . ```
 
 ## Configuration
 
@@ -34,3 +42,5 @@ To check any automations you will need this file ```~/sfmc_cli_automations_to_ch
 ```
 
 ## Usage
+
+Run ```sfmc_cli``` in your terminal and make your selection.
